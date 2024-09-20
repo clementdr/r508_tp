@@ -1,45 +1,189 @@
-/* Général: Appliquer une police élégante, un arrière-plan dégradé et ajuster le padding */
+/* Style global */
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  color: #f4f4f4;
+  color: #fff;
   margin: 0;
-  padding: 40px;
-  display: block;
-  text-align: center;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Conteneur pour centrer tout le contenu */
+/* Conteneur global */
 .container {
   background: rgba(255, 255, 255, 0.1);
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
+  max-width: 900px;
+  width: 100%;
   text-align: center;
-  max-width: 800px;
   transition: transform 0.3s ease;
 }
 
 .container:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-/* Style du titre principal avec des effets lumineux */
-h1 {
-  font-size: 50px;
-  color: #fff;
+/* Style du header */
+header h1 {
+  font-size: 48px;
   background: linear-gradient(90deg, #ff6a00, #ffde00, #00c6ff);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   animation: glow 2s infinite ease-in-out;
-  letter-spacing: 5px;
-  text-transform: uppercase;
 }
 
+header h3 {
+  font-size: 24px;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Section d'introduction */
+.introduction p {
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.introduction p:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+button {
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6a00, #ffde00, #00c6ff);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(90deg, #00c6ff, #ffde00, #ff6a00);
+}
+
+/* Section des fonctionnalités */
+.features h2 {
+  font-size: 32px;
+  margin: 40px 0 20px;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.feature-item i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #ffde00;
+}
+
+.feature-item h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.feature-item p {
+  font-size: 16px;
+  color: #eaeaea;
+}
+
+/* Témoignages */
+.testimonial h2 {
+  font-size: 32px;
+  margin: 40px 0;
+}
+
+.testimonial-slider {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial-item {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.testimonial-item blockquote {
+  font-size: 16px;
+  font-style: italic;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.testimonial-item p {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.social-media {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-media li {
+  display: inline;
+}
+
+.social-media li a {
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-media li a:hover {
+  color: #ffde00;
+}
+
+/* Animation néon du titre */
 @keyframes glow {
   0% {
     text-shadow: 0 0 5px #ff6a00, 0 0 10px #ff6a00;
@@ -50,55 +194,4 @@ h1 {
   100% {
     text-shadow: 0 0 5px #00c6ff, 0 0 15px #00c6ff;
   }
-}
-
-/* Sous-titre stylé avec effets de transition */
-h3 {
-  font-size: 28px;
-  color: #fff;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-h3:hover {
-  opacity: 1;
-  text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
-}
-
-/* Style du paragraphe avec animation sur hover */
-p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #eaeaea;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.5s ease, transform 0.3s ease;
-}
-
-p:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-10px);
-}
-
-/* Ajout de boutons stylisés */
-button {
-  font-size: 16px;
-  color: #fff;
-  background: linear-gradient(90deg, #ff6a00, #ffde00, #00c6ff);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
-  background: linear-gradient(90deg, #00c6ff, #ffde00, #ff6a00);
 }
