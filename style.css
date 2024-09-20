@@ -1,292 +1,33 @@
-/* Style global */
+/* Appliquer une police par défaut */
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
-  color: #fff;
+  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  overflow-x: hidden;
-}
-
-/* Mode sombre */
-.dark-mode {
-  background: #121212;
-  color: #b3b3b3;
-}
-
-/* Conteneur global */
-.container {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  max-width: 900px;
-  width: 100%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  line-height: 1.6;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
-.container:hover {
-  transform: scale(1.05);
+/* Style pour le titre principal */
+h1 {
+  color: #333;
+  text-align: center;
+  font-size: 36px;
 }
 
-/* Header */
-header h1 {
-  font-size: 48px;
-  background: linear-gradient(90deg, #ff6a00, #ffde00, #00c6ff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: glow 2s infinite ease-in-out;
-  cursor: pointer;
-}
-
-header h3 {
+/* Style pour le sous-titre */
+h3 {
+  color: #555;
   font-size: 24px;
-  color: #f4f4f4;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-button {
-  font-size: 16px;
-  color: #fff;
-  background: linear-gradient(90deg, #ff6a00, #ffde00, #00c6ff);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
-  background: linear-gradient(90deg, #00c6ff, #ffde00, #ff6a00);
-}
-
-/* Section d'introduction */
-.introduction p {
+/* Style pour le paragraphe */
+p {
+  color: #666;
   font-size: 18px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #fff;
   padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* Easter Egg caché */
-.hidden-easter-egg {
-  display: none;
-  margin-top: 20px;
-  background-color: #00ff00;
-  color: #000;
-  font-weight: bold;
-  padding: 10px;
   border-radius: 5px;
-  animation: bounce 1s ease-in-out infinite;
-}
-
-/* Section des fonctionnalités */
-.features h2 {
-  font-size: 32px;
-  margin: 40px 0 20px;
-}
-
-.feature-grid {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.feature-item {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.feature-item:hover {
-  transform: translateY(-10px);
-}
-
-.feature-item i {
-  font-size: 40px;
-  margin-bottom: 10px;
-  color: #ffde00;
-}
-
-.feature-item h4 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.feature-item p {
-  font-size: 16px;
-  color: #eaeaea;
-}
-
-/* Quiz interactif */
-.quiz-section {
-  margin-top: 40px;
-}
-
-.quiz-container {
-  margin-bottom: 20px;
-}
-
-.quiz-button {
-  margin: 5px;
-}
-
-/* Tricherie */
-.cheat-section {
-  margin-top: 40px;
-}
-
-#fake-tp {
-  display: none;
-  margin-top: 20px;
-  background-color: #ffcc00;
-  color: #000;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
-  animation: bounce 1s ease-in-out infinite;
-}
-
-/* Minuteur de concentration */
-.timer-section {
-  margin-top: 40px;
-}
-
-#timer {
-  font-size: 24px;
-  color: #ffde00;
-}
-
-/* Surprise message */
-#surprise-message {
-  display: none;
-  margin-top: 20px;
-  background-color: rgba(0, 128, 0, 0.7);
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Témoignages */
-.testimonial h2 {
-  font-size: 32px;
-  margin: 40px 0;
-}
-
-.testimonial-slider {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.testimonial-item {
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-}
-
-.testimonial-item blockquote {
-  font-size: 16px;
-  font-style: italic;
-  color: #f4f4f4;
-  margin-bottom: 10px;
-}
-
-.testimonial-item p {
-  font-size: 14px;
-  color: #fff;
-}
-
-/* Footer */
-footer {
-  margin-top: 40px;
-}
-
-footer p {
-  font-size: 14px;
-  color: #fff;
-}
-
-.social-media {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-media li {
-  display: inline;
-}
-
-.social-media li a {
-  color: #fff;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-.social-media li a:hover {
-  color: #ffde00;
-}
-
-/* Animations et interactions */
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px #ff6a00, 0 0 10px #ff6a00;
-  }
-  50% {
-    text-shadow: 0 0 20px #ffde00, 0 0 30px #ffde00;
-  }
-  100% {
-    text-shadow: 0 0 5px #00c6ff, 0 0 15px #00c6ff;
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Effet fun quand on survole le titre principal */
-#main-title:hover {
-  animation: wobble 1s ease infinite;
-}
-
-@keyframes wobble {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
