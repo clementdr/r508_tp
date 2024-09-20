@@ -1,13 +1,12 @@
 /* Général: Appliquer une police élégante, un arrière-plan dégradé et ajuster le padding */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
   color: #f4f4f4;
   margin: 0;
   padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  text-align: center;
   min-height: 100vh;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
@@ -42,9 +41,15 @@ h1 {
 }
 
 @keyframes glow {
-  0% { text-shadow: 0 0 5px #ff6a00, 0 0 10px #ff6a00; }
-  50% { text-shadow: 0 0 20px #ffde00, 0 0 30px #ffde00; }
-  100% { text-shadow: 0 0 5px #00c6ff, 0 0 15px #00c6ff; }
+  0% {
+    text-shadow: 0 0 5px #ff6a00, 0 0 10px #ff6a00;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffde00, 0 0 30px #ffde00;
+  }
+  100% {
+    text-shadow: 0 0 5px #00c6ff, 0 0 15px #00c6ff;
+  }
 }
 
 /* Sous-titre stylé avec effets de transition */
