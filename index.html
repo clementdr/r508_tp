@@ -3,53 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TP GIT</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>TP GIT - Fun Version</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
       <header>
-        <h1>Bienvenue au TP GIT</h1>
-        <h3>Apprenez, Codez et Contribuez</h3>
+        <h1 id="main-title">Bienvenue au TP GIT 🎉</h1>
+        <h3>Apprenez, Codez, et Contribuez... ou pas 😜</h3>
       </header>
 
       <section class="introduction">
         <p>
-          Ce TP vous permettra de vous familiariser avec l'outil de gestion de
-          versions <strong>Git</strong>. Que vous soyez débutant ou expert, ce
-          cours vous aidera à améliorer votre flux de travail collaboratif.
+          Ce TP va vous faire découvrir Git, un outil incontournable... ou bien,
+          continuez à envoyer vos fichiers par email 🤣.
         </p>
-        <button>Commencer le TP</button>
+        <button id="start-button">Commencer le TP</button>
+        <p id="hidden-message" class="hidden-easter-egg">Vous avez trouvé un easter egg ! 🥚</p>
       </section>
 
       <section class="features">
-        <h2>Pourquoi utiliser Git ?</h2>
+        <h2>Pourquoi utiliser Git ? 🤔</h2>
         <div class="feature-grid">
           <div class="feature-item">
             <i class="fas fa-code-branch"></i>
             <h4>Gestion des branches</h4>
-            <p>
-              Travaillez sur différentes branches simultanément et fusionnez vos
-              modifications facilement.
-            </p>
+            <p>Parce que coder directement sur <strong>master</strong>, c'est risqué 🧨.</p>
           </div>
 
           <div class="feature-item">
             <i class="fas fa-shield-alt"></i>
             <h4>Sécurité</h4>
-            <p>
-              Gardez une trace de toutes les versions de vos fichiers de manière
-              sécurisée et contrôlée.
-            </p>
+            <p>Parce qu'une sauvegarde automatique, c'est mieux que de prier 🙏.</p>
           </div>
 
           <div class="feature-item">
             <i class="fas fa-users"></i>
             <h4>Collaboration</h4>
-            <p>
-              Collaborez avec plusieurs développeurs sans conflits grâce aux
-              fonctionnalités avancées de Git.
-            </p>
+            <p>Parce que deux têtes valent mieux qu'une, même si l'une d'elles casse tout 💥.</p>
           </div>
         </div>
       </section>
@@ -59,16 +50,14 @@
         <div class="testimonial-slider">
           <div class="testimonial-item">
             <blockquote>
-              "Git a complètement changé la manière dont nous travaillons sur
-              des projets. Nos équipes sont plus efficaces que jamais !"
+              "Git a changé ma vie ! Je peux enfin travailler avec des collègues sans les détester (trop)." 
             </blockquote>
             <p>- Marie, Développeuse Frontend</p>
           </div>
 
           <div class="testimonial-item">
             <blockquote>
-              "Grâce à Git, la gestion de nos projets est devenue un jeu
-              d'enfant, même avec des équipes distantes."
+              "Avant Git, j'envoyais des fichiers par email et je faisais des sauvegardes sur clé USB... oui, je sais 😬."
             </blockquote>
             <p>- Thomas, Architecte Logiciel</p>
           </div>
@@ -76,17 +65,11 @@
       </section>
 
       <footer>
-        <p>&copy; 2024 TP GIT. Tous droits réservés.</p>
+        <p>&copy; 2024 TP GIT. Tous droits réservés... ou presque 😎.</p>
         <ul class="social-media">
-          <li>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-github"></i></a>
-          </li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fab fa-github"></i></a></li>
         </ul>
       </footer>
     </div>
@@ -96,5 +79,29 @@
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      // Easter Egg - Un message caché qui s'affiche quand on clique 5 fois sur le bouton
+      let clickCount = 0;
+      const startButton = document.getElementById("start-button");
+      const hiddenMessage = document.getElementById("hidden-message");
+
+      startButton.addEventListener("click", () => {
+        clickCount++;
+        if (clickCount === 5) {
+          hiddenMessage.style.display = "block";
+        }
+      });
+
+      // Effet fun quand on survole le titre principal
+      const mainTitle = document.getElementById("main-title");
+      mainTitle.addEventListener("mouseover", () => {
+        mainTitle.textContent = "Bienvenue au TP GIT 😎 - Cool Version";
+      });
+
+      mainTitle.addEventListener("mouseout", () => {
+        mainTitle.textContent = "Bienvenue au TP GIT 🎉";
+      });
+    </script>
   </body>
 </html>
