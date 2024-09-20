@@ -1,33 +1,99 @@
-/* Appliquer une police par défaut */
+/* Général: Appliquer une police élégante, un arrière-plan dégradé et ajuster le padding */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-    line-height: 1.6;
-  }
-  
-  /* Style pour le titre principal */
-  h1 {
-    color: #333;
-    text-align: center;
-    font-size: 36px;
-  }
-  
-  /* Style pour le sous-titre */
-  h3 {
-    color: #555;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style pour le paragraphe */
-  p {
-    color: #666;
-    font-size: 18px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #f4f4f4;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Conteneur pour centrer tout le contenu */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  max-width: 800px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+/* Style du titre principal avec des effets lumineux */
+h1 {
+  font-size: 50px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6a00, #ffde00, #00c6ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: glow 2s infinite ease-in-out;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #ff6a00, 0 0 10px #ff6a00; }
+  50% { text-shadow: 0 0 20px #ffde00, 0 0 30px #ffde00; }
+  100% { text-shadow: 0 0 5px #00c6ff, 0 0 15px #00c6ff; }
+}
+
+/* Sous-titre stylé avec effets de transition */
+h3 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+h3:hover {
+  opacity: 1;
+  text-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Style du paragraphe avec animation sur hover */
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #eaeaea;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+p:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-10px);
+}
+
+/* Ajout de boutons stylisés */
+button {
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff6a00, #ffde00, #00c6ff);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(90deg, #00c6ff, #ffde00, #ff6a00);
+}
