@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TP GIT - Fun Version</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <header>
         <h1 id="main-title">Bienvenue au TP GIT 🎉</h1>
         <h3>Apprenez, Codez, et Contribuez... ou pas 😜</h3>
+        <button id="dark-mode-toggle">Activer Mode Hacker 👾</button>
       </header>
 
       <section class="introduction">
@@ -45,6 +46,37 @@
         </div>
       </section>
 
+      <!-- Nouveauté 1: Quiz Git interactif -->
+      <section class="quiz-section">
+        <h2>Testez vos connaissances en Git 🎯</h2>
+        <div class="quiz-container">
+          <p>Question : Que signifie 'git commit' ?</p>
+          <button class="quiz-button" data-answer="correct">Enregistrer un changement</button>
+          <button class="quiz-button" data-answer="wrong">Détruire le projet 😱</button>
+        </div>
+        <p id="quiz-result"></p>
+      </section>
+
+      <!-- Nouveauté 2: Tricherie -->
+      <section class="cheat-section">
+        <h2>Envie de tricher ? 🤫</h2>
+        <button id="cheat-button">Activer mode tricheur 🚀</button>
+        <div id="fake-tp" class="hidden-easter-egg">Bravo, vous avez découvert la triche. Oups... Ce n'était qu'une blague ! 😜</div>
+      </section>
+
+      <!-- Nouveauté 3: Minuteur -->
+      <section class="timer-section">
+        <h2>Minuteur de concentration ⏱</h2>
+        <p>Combien de temps pouvez-vous rester concentré sur ce TP ?</p>
+        <div id="timer">0 secondes</div>
+      </section>
+
+      <!-- Nouveauté 4: Message surprise -->
+      <section class="surprise-section">
+        <p id="surprise-message" class="hidden-easter-egg">Surprise ! 🎉 Tu es toujours là ? 😎</p>
+      </section>
+
+      <!-- Témoignages -->
       <section class="testimonial">
         <h2>Témoignages</h2>
         <div class="testimonial-slider">
@@ -102,6 +134,48 @@
       mainTitle.addEventListener("mouseout", () => {
         mainTitle.textContent = "Bienvenue au TP GIT 🎉";
       });
+
+      // Mode sombre
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const body = document.body;
+      darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+      });
+
+      // Minuteur de concentration
+      let time = 0;
+      const timer = document.getElementById("timer");
+      setInterval(() => {
+        time++;
+        timer.textContent = time + ' secondes';
+      }, 1000);
+
+      // Quiz interactif
+      const quizButtons = document.querySelectorAll('.quiz-button');
+      const quizResult = document.getElementById('quiz-result');
+      quizButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          if (button.getAttribute('data-answer') === 'correct') {
+            quizResult.textContent = 'Bonne réponse ! 🎉';
+            quizResult.style.color = 'green';
+          } else {
+            quizResult.textContent = 'Mauvaise réponse... 😢';
+            quizResult.style.color = 'red';
+          }
+        });
+      });
+
+      // Tricherie
+      const cheatButton = document.getElementById("cheat-button");
+      const fakeTP = document.getElementById("fake-tp");
+      cheatButton.addEventListener("click", () => {
+        fakeTP.style.display = "block";
+      });
+
+      // Message surprise
+      setTimeout(() => {
+        document.getElementById('surprise-message').style.display = 'block';
+      }, 10000);
     </script>
   </body>
 </html>
